@@ -57,6 +57,11 @@ export class AppComponent {
     this.errorInfos = [];
     this.infos = [];
 
+    // If not loggedin, redirect to login page
+    if (!this.oauthService.hasValidAccessToken()) {
+      document.location.href = this.settings.get().oidcIssuer + "/login";
+    }
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url.split("/")[1];

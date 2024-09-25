@@ -71,6 +71,60 @@
     >
       <button
         type="button "
+        class="button-language btn btn-outline-primary border-0 d-flex flex-row align-items-center"
+        ngbDropdownToggle
+      >
+        <img
+          src="{{getCurrentLanguageImgPath()}}"
+          width="24px"
+          height="24px"
+          alt="language-icon"
+        />
+      </button>
+
+      <div
+        class="custom-dropdown-menu-header dropdown-menu px-2 rounded-lg"
+        ngbDropdownMenu
+      >
+        <button
+          ngbDropdownItem
+          class="border-0 d-flex flex-row justify-content-start align-items-center py-2 btn btn-outline-primary bg-transparent px-0"
+          (click)="changelLanguage('en')"
+        >
+          <img
+            src="assets/img/english-icon.png"
+            width="24px"
+            height="24px"
+            alt="english-icon"
+          />
+          <div class="p-1"></div>
+          English
+        </button>
+        <button
+          ngbDropdownItem
+          class="border-0 d-flex flex-row justify-content-start align-items-center py-2 btn btn-outline-primary bg-transparent px-0"
+          (click)="changelLanguage('tw')"
+        >
+          <img
+            src="assets/img/taiwan-icon.svg"
+            width="24px"
+            height="24px"
+            alt="english-icon"
+          />
+          <div class="p-1"></div>
+          Taiwan
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="btn-group"
+      ngbDropdown
+      role="group"
+      aria-label="Button group with nested dropdown"
+    >
+      <button
+        type="button "
         class="btn-logout btn btn-outline-primary border-0 d-flex flex-row justify-content-center align-items-center"
         ngbDropdownToggle
       >
@@ -79,12 +133,12 @@
         <div class="label-username">{{ getId() }}</div>
       </button>
       <div
-        class="custom-dropdown-menu-header dropdown-menu px-2 rounded-lg"
+        class="custom-dropdown-menu-header dropdown-menu px-3 rounded-lg"
         ngbDropdownMenu
       >
         <button
           ngbDropdownItem
-          class="border-0 d-flex flex-row justify-content-start align-items-center py-2 btn btn-outline-primary bg-transparent px-0"
+          class="border-0 d-flex flex-row justify-content-start align-items-center py-3 btn btn-outline-primary bg-transparent px-0"
           [routerLink]="['/selfservice']"
           *ngIf="isLoggedIn()"
         >
@@ -93,7 +147,7 @@
           {{ getId() }}
         </button>
         <button
-          class="btn btn-primary btn-lg py-2 d-flex align-items-center justify-content-center"
+          class="btn btn-primary btn-lg py-3 d-flex align-items-center justify-content-center"
           ngbDropdownItem
           (click)="isLoggedIn() ? logout() : login()"
         >

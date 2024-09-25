@@ -20,6 +20,7 @@ export class AppComponent {
   infos: any[];
   pageAccessLevel = ""; // May be set to 'login' or 'admin' to show error messages
   currentRoute: string;
+  currentLanguage: "en" | "tw" = "en";
 
   constructor(
     public oauthService: OAuthService,
@@ -156,5 +157,31 @@ export class AppComponent {
       default:
         return "";
     }
+  }
+
+  currentLanguageLabel() {
+    switch (this.currentLanguage) {
+      case "en":
+        return "English";
+      case "tw":
+        return "Taiwan";
+      default:
+        return "English";
+    }
+  }
+
+  getCurrentLanguageImgPath() {
+    switch (this.currentLanguage) {
+      case "en":
+        return "assets/img/english-icon.png";
+      case "tw":
+        return "assets/img/taiwan-icon.svg";
+      default:
+        return "assets/img/english-icon.png";
+    }
+  }
+
+  changelLanguage(value: "en" | "tw") {
+    this.currentLanguage = value;
   }
 }

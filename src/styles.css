@@ -129,6 +129,33 @@ body { margin: 0; font-family: Inter , "Helvetica Neue", sans-serif !important; 
   top: 0.5em;
 }
 
+.card  {
+  background-color: #F9FAFC !important;
+  border-radius: 10px !important;
+  border: none !important;
+  padding: 10px !important;
+}
+
+.card .card-header {
+  background-color: transparent !important;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.94px;
+  text-align: left;
+  border-bottom: 1px solid rgba(225, 228, 229, 1);
+}
+
+.card .card-footer {
+  background-color: transparent !important;
+  border: none;
+}
+
+.card table tbody td {
+  border: none;
+}
+
 .card.card-new:hover {
   background-color: #f2f5f8;
   cursor: pointer;

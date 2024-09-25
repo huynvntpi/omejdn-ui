@@ -35,7 +35,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="users">
   <div class="col" *ngFor="let user of users | search: searchTerm">
     <div class="card m-2 h-100" [routerLink]="['/user', user.username]">
-      <div class="card-header text-truncate fs-4">
+      <div class="card-header">
         <!--<div *ngIf="getAttribute(user,'picture')!=null" class="me-1 mt-1 d-inline-block border rounded-circle"
           style="height: 64px; width: 64px; background-size: cover"
           [ngStyle]="{'background-image':'url('+getAttribute(user,'picture')+')'}">
@@ -60,7 +60,7 @@
         <h6 class="card-sbutitle" *ngIf="hasAttributes(user)">
           <strong>Attributes:</strong>
         </h6>
-        <table class="table table-sm">
+        <table class="table table-sm border-0">
           <tbody>
             <tr *ngFor="let attribute of getUserAttributes(user)">
               <td class="table-content">{{attribute.key}}</td>

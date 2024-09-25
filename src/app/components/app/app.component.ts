@@ -55,7 +55,7 @@ export class AppComponent {
       } else {
         // If not loggedin, redirect to login page
         if (!this.user) {
-          document.location.href = this.settings.get().oidcIssuer + "/login";
+          this.login();
         }
       }
     });

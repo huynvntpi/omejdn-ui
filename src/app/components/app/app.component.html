@@ -63,21 +63,44 @@
   </div>
 
   <div style="float: right">
-    <li class="nav-item dropdown">
-      <a
-        class="nav-link dropdown-toggle"
-        href="#"
-        id="navbarDropdownMenuLink"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
+    <div
+      class="btn-group"
+      ngbDropdown
+      role="group"
+      aria-label="Button group with nested dropdown"
+    >
+      <button
+        type="button "
+        class="btn-logout btn btn-outline-primary border-0 d-flex flex-row justify-content-center align-items-center"
+        ngbDropdownToggle
       >
-        {{ getId() }}
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Logout</a>
+        <div class="p-3 bg-secondary rounded-circle"></div>
+        <div class="p-1"></div>
+        <div class="label-username">{{ getId() }}</div>
+      </button>
+      <div
+        class="custom-dropdown-menu-header dropdown-menu px-2 rounded-lg"
+        ngbDropdownMenu
+      >
+        <button
+          ngbDropdownItem
+          class="border-0 d-flex flex-row justify-content-start align-items-center py-2 btn btn-outline-primary bg-transparent px-0"
+          [routerLink]="['/selfservice']"
+          *ngIf="isLoggedIn()"
+        >
+          <div class="avatar-small bg-secondary rounded-circle"></div>
+          <div class="p-1"></div>
+          {{ getId() }}
+        </button>
+        <button
+          class="btn btn-primary btn-lg py-2 d-flex align-items-center justify-content-center"
+          ngbDropdownItem
+          (click)="isLoggedIn() ? logout() : login()"
+        >
+          {{ isLoggedIn() ? "Log Out" : "Login" }}
+        </button>
       </div>
-    </li>
+    </div>
 
     <!-- <button
       class="btn btn-secondary me-3 justify-content-end"
@@ -88,12 +111,12 @@
       {{ getId() }}
     </button> -->
     <!--Login/Logout Button-->
-    <button
+    <!-- <button
       class="btn btn-lg btn-outline-primary justify-content-end"
       (click)="isLoggedIn() ? logout() : login()"
     >
       {{ isLoggedIn() ? "Logout" : "Login" }}
-    </button>
+    </button> -->
   </div>
 </nav>
 

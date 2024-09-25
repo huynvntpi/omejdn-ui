@@ -19,23 +19,32 @@
     <div>
       <ul class="navbar-nav me-auto">
         <li class="nav-item" *ngIf="isAdmin()">
-          <a class="nav-link {{currentRoute == 'user' ? 'active' : ''}}" href="./user" (click)="isMenuCollapsed = true"
+          <a
+            class="nav-link {{ currentRoute == 'user' ? 'active' : '' }}"
+            href="./user"
+            (click)="isMenuCollapsed = true"
             >User</a
           >
         </li>
         <li class="nav-item" *ngIf="isAdmin()">
-          <a class="nav-link {{currentRoute == 'client' ? 'active' : ''}}" href="./client" (click)="isMenuCollapsed = true"
+          <a
+            class="nav-link {{ currentRoute == 'client' ? 'active' : '' }}"
+            href="./client"
+            (click)="isMenuCollapsed = true"
             >Client</a
           >
         </li>
         <li class="nav-item" *ngIf="isAdmin()">
-          <a class="nav-link {{currentRoute == 'config' ? 'active' : ''}}" href="./config" (click)="isMenuCollapsed = true"
+          <a
+            class="nav-link {{ currentRoute == 'config' ? 'active' : '' }}"
+            href="./config"
+            (click)="isMenuCollapsed = true"
             >Config</a
           >
         </li>
         <li class="nav-item" *ngIf="isAdmin()">
           <a
-            class="nav-link {{currentRoute == 'webfinger' ? 'active' : ''}}"
+            class="nav-link {{ currentRoute == 'webfinger' ? 'active' : '' }}"
             href="./webfinger"
             (click)="isMenuCollapsed = true"
             >Webfinger</a
@@ -43,7 +52,7 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-link {{currentRoute == 'endpoints' ? 'active' : ''}}"
+            class="nav-link {{ currentRoute == 'endpoints' ? 'active' : '' }}"
             href="./endpoints"
             (click)="isMenuCollapsed = true"
             >Endpoints</a
@@ -54,14 +63,30 @@
   </div>
 
   <div style="float: right">
-    <button
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        id="navbarDropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        {{ getId() }}
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Logout</a>
+      </div>
+    </li>
+
+    <!-- <button
       class="btn btn-secondary me-3 justify-content-end"
       [routerLink]="['/selfservice']"
       *ngIf="isLoggedIn()"
     >
       <span class="fa fa-user-circle fa-2x"></span>
       {{ getId() }}
-    </button>
+    </button> -->
     <!--Login/Logout Button-->
     <button
       class="btn btn-lg btn-outline-primary justify-content-end"

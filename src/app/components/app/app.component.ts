@@ -52,15 +52,15 @@ export class AppComponent {
             this.router.navigateByUrl("/selfservice");
           }
         });
+      } else {
+        // If not loggedin, redirect to login page
+        if (!this.user) {
+          document.location.href = this.settings.get().oidcIssuer + "/login";
+        }
       }
     });
     this.errorInfos = [];
     this.infos = [];
-
-    // If not loggedin, redirect to login page
-    if (!this.oauthService.hasValidAccessToken()) {
-      document.location.href = this.settings.get().oidcIssuer + "/login";
-    }
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

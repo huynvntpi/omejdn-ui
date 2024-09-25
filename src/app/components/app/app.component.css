@@ -6,6 +6,7 @@ div.img-container{
     padding-left: 10%;
     padding-right: 10%;
     border-bottom: 1px solid rgba(225, 228, 229, 1);
+    max-height: 64px;
 }
 
 .active { 
@@ -52,4 +53,18 @@ div.img-container{
 
 .button-language:hover {
     background-color: unset;
+}
+
+.section-below-header {
+    background: linear-gradient(90.28deg, #022AA6 0%, #9BF8FF 100%);
+    height: 164px;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    z-index: -1;
+}
+
+.content-container {
+    margin-top: 84px;
 }

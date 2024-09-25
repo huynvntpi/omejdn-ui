@@ -61,7 +61,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="clients">
   <div class="col" *ngFor="let client of clients | search : searchTerm">
     <div class="card m-2 h-100" [routerLink]="['/client', client.client_id]">
-      <div class="card-header text-truncate fs-4">
+      <div class="card-header">
         <i
           class="fa fa-lock text-secondary"
           *ngIf="client.token_endpoint_auth_method != 'none'"

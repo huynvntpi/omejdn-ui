@@ -22,6 +22,10 @@ body { margin: 0; font-family: Inter , "Helvetica Neue", sans-serif !important; 
   background-color: unset !important;
 }
 
+.btn.btn-outline-primary:focus {
+  box-shadow: none !important;
+}
+
 .btn.btn-primary {
   background-image: none;
   background-color: #05286C;
@@ -184,8 +188,6 @@ div.card-avatar-character {
   border-radius: 10px;
   width: 45%;
   background-color: #fff;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .custom-form-inline .form-control {
@@ -202,3 +204,16 @@ div.card-avatar-character {
 input:focus {
   box-shadow: none !important;
 } 
+
+.custom-search-icon-wrapper {
+  height: 56px;
+  margin-left: 10px;
+}
+
+.mr-10px {
+  margin-right: 10px;
+}
+.rounded-left-side {
+  border-radius: 10px 0 0px 10px !important;
+  border: none !important;
+}

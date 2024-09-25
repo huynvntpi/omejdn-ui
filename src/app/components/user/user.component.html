@@ -3,24 +3,24 @@
  
   <!-- <span class="fa fa-user-circle fa-2x"></span> -->
   <div class="input-group" *ngIf = "!showNewUser">
-    <div class="px-2 d-flex justify-content-center align-items-center" style="height: 56px">
+    <div class="px-2 d-flex justify-content-center align-items-center custom-search-icon-wrapper">
       <img class="mx-1" src="assets/img/search-icon.svg" width="14px" height="14px" />
     </div>
 
-    <input class="form-control" type="search" [(ngModel)]="searchTerm" name="searchTerm"
+    <input class="form-control " type="search" [(ngModel)]="searchTerm" name="searchTerm"
       placeholder="Search users">
-    <button class="btn btn-outline-primary border-0"  (click)="showNewUser = true">
+    <button class="btn btn-outline-primary border-0 mr-10px"  (click)="showNewUser = true">
       <i class="fa fa-plus-square text-primary"></i>
       Add User
     </button>
   </div>
   <div class="input-group" *ngIf = "showNewUser">
-    <span class="input-group-text">Please enter a new Username</span>
-    <input class="form-control" type="text" #newUsername>
-    <button class="btn btn-primary " type="button" (click)="addUser(newUsername.value)">
+    <span class="input-group-text rounded-left-side">Please enter a new Username</span>
+    <input class="form-control" placeholder="Enter username" type="text" #newUsername>
+    <button class="btn btn-outline-primary border-0 " type="button" (click)="addUser(newUsername.value)">
       <span class="fa fa-plus-square text-primary"></span> Add User
     </button>
-    <button class="btn btn-primary" (click)="showNewUser = false">
+    <button class="btn btn-outline-primary border-0 mr-10px" (click)="showNewUser = false">
       <span class="fa fa-close"></span> Back
     </button>
   </div>

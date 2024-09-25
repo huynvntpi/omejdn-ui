@@ -5,8 +5,7 @@
 >
   <div class="input-group" *ngIf="!showNewClient">
     <div
-      class="px-2 d-flex justify-content-center align-items-center"
-      style="height: 56px"
+      class="px-2 d-flex justify-content-center align-items-center custom-search-icon-wrapper"
     >
       <img
         class="mx-1"
@@ -31,16 +30,16 @@
     </button>
   </div>
   <div class="input-group" *ngIf="showNewClient">
-    <span class="input-group-text">Please enter a new Client ID</span>
-    <input class="form-control" type="text" #newClientId />
+    <span class="input-group-text rounded-left-side">Please enter a new Client ID</span>
+    <input class="form-control" placeholder="Enter client ID" type="text" #newClientId />
     <button
-      class="btn btn-primary"
+      class="btn btn-outline-primary border-0"
       type="button"
       (click)="addClient(newClientId.value)"
     >
       <span class="fa fa-plus-square text-primary"></span> Add Client
     </button>
-    <button class="btn btn-primary" (click)="showNewClient = false">
+    <button class="btn btn-outline-primary border-0 mr-10px" (click)="showNewClient = false">
       <span class="fa fa-close"></span> Back
     </button>
   </div>

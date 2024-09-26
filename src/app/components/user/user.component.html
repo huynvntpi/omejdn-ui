@@ -17,12 +17,15 @@
   <div class="input-group bg-white rounded-lg" *ngIf = "showNewUser">
     <span class="input-group-text rounded-left-side border-0">Please enter a new Username</span>
     <input class="form-control border-0 bg-transparent" placeholder="Enter username" type="text" #newUsername>
-    <button class="btn btn-outline-primary border-0 " type="button" (click)="addUser(newUsername.value)" style="color: #3656DE !important;">
-      <img src="assets/img/plus-circle-icon.svg" /> Add User
-    </button>
-    <button class="btn btn-outline-primary border-0 mr-10px" (click)="showNewUser = false">
-      <span class="fa fa-close"></span> Back
-    </button>
+    <div class="d-flex align-items-center" style="min-height: 100%">
+      <button class="btn btn-outline-primary border-0 " type="button" (click)="addUser(newUsername.value)" style="color: #3656DE !important;">
+        <img src="assets/img/plus-circle-icon.svg" /> Add User
+      </button>
+      <div class="vertifcal-divider"></div>
+      <button class="btn btn-outline-primary border-0 mr-10px" (click)="showNewUser = false">
+        <img src="assets/img/close-circle-icon.svg" /> Back
+      </button>
+    </div>
   </div>
 </form>
 <br />

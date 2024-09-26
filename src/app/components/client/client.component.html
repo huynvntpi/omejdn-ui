@@ -25,23 +25,27 @@
       class="btn btn-outline-primary border-0"
       (click)="showNewClient = true"
     >
-      <i class="fa fa-plus-square text-primary"></i>
+    <img src="assets/img/plus-circle-icon.svg" />
       Add Client
     </button>
   </div>
-  <div class="input-group  bg-white rounded-lg" *ngIf="showNewClient">
+  <div class="input-group bg-white rounded-lg" *ngIf="showNewClient">
     <span class="input-group-text rounded-left-side border-0">Please enter a new Client ID</span>
     <input class="form-control border-0" style="margin-left: 0px;" placeholder="Enter client ID" type="text" #newClientId />
-    <button
-      class="btn btn-outline-primary border-0"
-      type="button"
-      (click)="addClient(newClientId.value)"
-    >
-      <span class="fa fa-plus-square text-primary"></span> Add Client
-    </button>
-    <button class="btn btn-outline-primary border-0 mr-10px" (click)="showNewClient = false">
-      <span class="fa fa-close"></span> Back
-    </button>
+    
+    <div class="d-flex align-items-center" style="min-height: 100%">
+      <button
+        class="btn btn-outline-primary border-0"
+        type="button"
+        (click)="addClient(newClientId.value)"
+      >
+      <img src="assets/img/plus-circle-icon.svg" /> Add Client
+      </button>
+      <div class="vertifcal-divider"></div>
+      <button class="btn btn-outline-primary border-0 mr-10px" (click)="showNewClient = false">
+        <img src="assets/img/close-circle-icon.svg" /> Back
+      </button>
+  </div>
   </div>
 </form>
 <br />

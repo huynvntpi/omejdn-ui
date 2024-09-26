@@ -2,7 +2,7 @@
 <form class="form-inline custom-form-inline" style="display: table; margin: auto;">
  
   <!-- <span class="fa fa-user-circle fa-2x"></span> -->
-  <div class="input-group" *ngIf = "!showNewUser">
+  <div class="input-group bg-white rounded-lg" *ngIf = "!showNewUser">
     <div class="px-2 d-flex justify-content-center align-items-center custom-search-icon-wrapper">
       <img class="mx-1" src="assets/img/search-icon.svg" width="14px" height="14px" />
     </div>
@@ -14,7 +14,7 @@
       Add User
     </button>
   </div>
-  <div class="input-group" *ngIf = "showNewUser">
+  <div class="input-group bg-white rounded-lg" *ngIf = "showNewUser">
     <span class="input-group-text rounded-left-side border-0">Please enter a new Username</span>
     <input class="form-control border-0 bg-transparent" placeholder="Enter username" type="text" #newUsername>
     <button class="btn btn-outline-primary border-0 " type="button" (click)="addUser(newUsername.value)" style="color: #3656DE !important;">

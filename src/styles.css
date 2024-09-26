@@ -201,6 +201,26 @@ div.card-avatar-character {
   height: 46px;
 }
 
+input {
+  border-radius: 10px !important;
+  border: 1px solid rgba(225, 228, 229, 1) !important;
+  
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+}
+
+input::placeholder {
+  /* border-radius: 10px !important; */
+  /* border: 1px solid rgba(225, 228, 229, 1) !important; */
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+}
+
 input:focus {
   box-shadow: none !important;
 } 
@@ -216,4 +236,36 @@ input:focus {
 .rounded-left-side {
   border-radius: 10px 0 0px 10px !important;
   border: none !important;
+}
+
+.page-content-detail {
+  padding: 40px calc(10% - 20px);
+}
+
+.rounded-full {
+  border-radius: 100% !important;
+}
+
+.btn-trash-circle {
+  background-color: rgba(249, 250, 252, 1) !important;
+  border-width: 0 !important;
+  border-radius: 100% !important;
+  margin-left: 20px !important;
+}
+
+.btn-trash-circle:hover  {
+  color: unset !important;
+}
+
+.bg-surface {
+  background: rgba(228, 234, 240, 1) !important;
+}
+
+.bg-surface-secondary {
+  background: rgba(238, 242, 245, 1) !important;;
+}
+
+
+.bg-transparent {
+  background-color: transparent;
 }

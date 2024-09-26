@@ -1,8 +1,8 @@
-<div *ngIf="user">
-
+<div *ngIf="user" class="page-content-detail">
+  <!-- User name -->
+  <h2>Connector A</h2>
   <!--username-->
   <app-inputfield type="string" name="Username" [value]="user['username']" [static]="true"></app-inputfield>
-  
   <!--Status-->
   <app-inputfield type="string" name="Status" [value]="isExtern() ? 'extern: '+user.extern : 'intern'" [static]="true"></app-inputfield>
 
@@ -126,10 +126,10 @@
   </div>
 
   <!--Save Button-->
-  <div class="clearfix mt-5">
-    <button type="submit" class="btn btn-primary btn-save-and-cancel float-left me-5"
-      (click)="saveChanges()">Save</button>
-    <a href="./user" class="btn btn-primary btn-save-and-cancel float-left">Cancel</a>
+  <div class="clearfix mt-5 d-flex justify-content-end pr-0">
+    <a href="./user" class="btn btn-outline-primary border-0 btn-save-and-cancel float-right btn-lg d-flex justify-content-center align-items-center">Cancel</a>
+    <button type="submit" class="btn btn-primary btn-save-and-cancel float-right btn-lg"
+    (click)="saveChanges()">Save</button>
   </div>
   <br />
 </div>

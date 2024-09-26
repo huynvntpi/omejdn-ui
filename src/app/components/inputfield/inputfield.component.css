@@ -5,3 +5,27 @@
 .input-group>.input-group-prepend>.input-group-text {
     width: 100%;
 }
+
+.card {
+    padding: 10px 5px !important;
+}
+
+.card-body {
+    padding: 0px !important;
+}
+
+.card-header {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.36px;
+    text-align: left;
+    color: rgba(8, 8, 44, 1);
+}
+
+.card-header-child {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: rgba(78, 95, 111, 1);
+}

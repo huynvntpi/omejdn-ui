@@ -14,6 +14,7 @@ export class InputfieldComponent implements OnInit {
   @Input() refID;    // Reference for deletion (e.g. Array index)
   @Input() addCallback; // A callback for addition
   @Input() static = false; // Whether the object cannot be edited (only applies to primitives)
+  @Input() isChild = false; // Is this field is child of any input field
 
   @Output() valueChange: EventEmitter<any> = new EventEmitter();
 

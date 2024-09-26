@@ -47,4 +47,13 @@
 .input-group-for-children .form-control {
     background-color: transparent;
     border: none !important;
+    color: #08082C;
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: #4E5F6F;
 }

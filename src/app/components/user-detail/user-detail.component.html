@@ -1,6 +1,6 @@
 <div *ngIf="user" class="page-content-detail">
   <!-- User name -->
-  <h2>Connector A</h2>
+  <h2 class="page-title">{{user['username']}}</h2>
   <!--username-->
   <app-inputfield type="string" name="Username" [value]="user['username']" [static]="true"></app-inputfield>
   <!--Status-->

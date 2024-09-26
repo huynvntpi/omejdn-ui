@@ -1,7 +1,7 @@
 <!--Primitive values-->
 <div class="form-group my-2" *ngIf="!isChildren && getType() != 'boolean' && !getType().startsWith('array') && !getType().startsWith('attribute')">
   <!--Name-->
-  <label *ngIf="name" style="margin-bottom: 10px;">{{ name }}</label>
+  <label *ngIf="name" class="input-label" style="margin-bottom: 10px;">{{ name }}</label>
   <div class="input-group">
     <!--Input-->
     <input class="form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" type="text"     [disabled]="static" *ngIf="getType() == 'string'" placeholder="Input text">
@@ -48,7 +48,7 @@
   
   <div class="input-group input-group-for-children d-flex justify-content-center align-items-center">
     <!--Name-->
-    <div class="d-flex justify-content-center align-items-center" style="width: 50px; height: 80% !important; border-right: 1px solid rgba(225, 228, 229, 1) !important;">
+    <div class="input-label d-flex justify-content-center align-items-center" style="width: 50px; height: 80% !important; border-right: 1px solid rgba(225, 228, 229, 1) !important;">
       <label *ngIf="name">{{ name }}</label>
     </div>
     <!--Input-->

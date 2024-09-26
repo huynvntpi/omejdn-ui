@@ -20,7 +20,7 @@ body { margin: 0; font-family: Inter , "Helvetica Neue", sans-serif !important; 
 }
 
 .btn.btn-outline-primary {
-  color: #08082C !important;
+  color: #4E5F6F !important;
 
   font-size: 14px;
   font-weight: 400 !important;
@@ -29,7 +29,7 @@ body { margin: 0; font-family: Inter , "Helvetica Neue", sans-serif !important; 
 }
 
 .btn.btn-outline-primary:hover {
-  color: #08082C !important;
+  color: #4E5F6F !important;
   background-color: unset !important;
 }
 
@@ -371,4 +371,9 @@ input:focus {
 .breadcrumb-item a:hover {
   text-decoration: underline;
   color: #fff;
+}
+
+
+.table-content {
+  color: #4E5F6F;
 }

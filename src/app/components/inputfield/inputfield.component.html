@@ -1,14 +1,12 @@
 <!--Primitive values-->
-<div class="form-group my-2" *ngIf="!isChildren && !getType().startsWith('array') && !getType().startsWith('attribute')">
+<div class="form-group my-2" *ngIf="!isChildren && getType() != 'boolean' && !getType().startsWith('array') && !getType().startsWith('attribute')">
   <!--Name-->
   <label *ngIf="name" style="margin-bottom: 10px;">{{ name }}</label>
   <div class="input-group">
     <!--Input-->
     <input class="form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" type="text"     [disabled]="static" *ngIf="getType() == 'string'" placeholder="Input text">
     <input class="form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" type="number"   [disabled]="static" *ngIf="getType() == 'number'" placeholder="0">
-    <div class="input-group-text" *ngIf="getType() == 'boolean'">
-      <input class="form-check-input mt-0" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" type="checkbox" [disabled]="static" placeholder="Select value">
-    </div>
+    
     <select [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" class="form-control" [disabled]="static" *ngIf="getType() == 'enum'">
       <option *ngFor="let val of options" [value]="val">{{val}}</option>
     </select>
@@ -24,6 +22,26 @@
       <span class="fa fa-plus"></span>
     </button>
   </div>
+</div>
+
+<div class="input-group my-2" *ngIf="!isChildren && getType() == 'boolean' && !getType().startsWith('array') && !getType().startsWith('attribute')">
+  <!--Name-->
+  <div class="checkbox-input-wrapper" style="height: 46px;">
+    <label *ngIf="name" class="mx-2">{{ name }}</label>
+    <div class="vertifcal-divider" style="margin-left: 15px; margin-right: 15px;"></div>
+    <!--Input-->
+    <div class="d-flex justify-content-center align-items-center" *ngIf="getType() == 'boolean'">
+      <input class="form-check-input mt-0 bg-transparent" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" type="checkbox" [disabled]="static" placeholder="Select value">
+    </div>
+  </div>
+
+   <!--Add/delete-->
+   <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null">
+    <img alt="trash" src="assets/img/trash-icon.svg" />
+  </button>
+  <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
+    <span class="fa fa-plus"></span>
+  </button>
 </div>
 
 <div class="input-group my-2" style="flex-wrap: unset;" *ngIf="isChildren && !getType().startsWith('array') && !getType().startsWith('attribute')">

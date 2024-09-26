@@ -312,8 +312,8 @@ input:focus {
 
 .vertifcal-divider {
   width: 1px;
-  height: 70%;
-  min-height: 30px;
+  height: 60%;
+  min-height: 25px;
   background-color: rgba(225, 228, 229, 1) !important;
 }
 .flex-1 {

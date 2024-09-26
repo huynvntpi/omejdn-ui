@@ -9,16 +9,16 @@
 
     <input class="form-control border-0 " type="search" [(ngModel)]="searchTerm" name="searchTerm"
       placeholder="Search users">
-    <button class="btn btn-outline-primary border-0 mr-10px"  (click)="showNewUser = true">
-      <i class="fa fa-plus-square text-primary"></i>
+    <button class="btn btn-outline-primary border-0 mr-10px"  (click)="showNewUser = true" style="color: #3656DE !important;">
+      <img src="assets/img/plus-circle-icon.svg" />
       Add User
     </button>
   </div>
   <div class="input-group" *ngIf = "showNewUser">
-    <span class="input-group-text rounded-left-side">Please enter a new Username</span>
-    <input class="form-control" placeholder="Enter username" type="text" #newUsername>
-    <button class="btn btn-outline-primary border-0 " type="button" (click)="addUser(newUsername.value)">
-      <span class="fa fa-plus-square text-primary"></span> Add User
+    <span class="input-group-text rounded-left-side border-0">Please enter a new Username</span>
+    <input class="form-control border-0 bg-transparent" placeholder="Enter username" type="text" #newUsername>
+    <button class="btn btn-outline-primary border-0 " type="button" (click)="addUser(newUsername.value)" style="color: #3656DE !important;">
+      <img src="assets/img/plus-circle-icon.svg" /> Add User
     </button>
     <button class="btn btn-outline-primary border-0 mr-10px" (click)="showNewUser = false">
       <span class="fa fa-close"></span> Back
@@ -81,18 +81,17 @@
           Do you really want to delete this user?
         </div>
         <button class="btn btn-primary float-end m-1 btn-lg" (click)="deleteUser(user); $event.stopPropagation()" *ngIf="confirmUser == user.username">
-          <span class="fa fa-trash"></span> Delete
+         <div>Delete</div>
         </button>
         <button class="btn btn-primary float-end m-1 btn-lg" (click)="hideConfirmDelete(); $event.stopPropagation()" *ngIf="confirmUser == user.username">
-          <span class="fa fa-close"></span> Cancel
+          Cancel
         </button>
         <button class="btn btn-primary float-end m-1 btn-lg" *ngIf="user.username!= confirmUser"
           [routerLink]="['/user/', user.username]">
-          <span class="fa fa-edit"></span> Edit
+          Edit
         </button>
         <button class="btn btn-outline-primary border-0 float-end m-1 btn-lg" *ngIf="user.username!= confirmUser"
-          (click)="confirmDelete(user); $event.stopPropagation()">
-          <span class="fa fa-trash"></span> Delete
+          (click)="confirmDelete(user); $event.stopPropagation()">Delete
         </button>
         <button class="btn btn-primary float-end m-1" (click)="openUser = user; $event.stopPropagation()" *ngIf="user.username!= confirmUser && (openUser != user) && hasLotsOfAttributes(user)">
           <i class="fa fa-expand"></i> Show all

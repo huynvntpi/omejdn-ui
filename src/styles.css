@@ -162,6 +162,18 @@ body { margin: 0; font-family: Inter , "Helvetica Neue", sans-serif !important; 
   border-bottom: 1px solid rgba(225, 228, 229, 1);
 }
 
+.card-footer .alert {
+  border-radius: 10px;
+  background: rgba(255, 229, 229, 1);
+  border: 1px solid rgba(255, 152, 152, 1);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+  color: #D3180C;
+}
+
 .page-title {
   font-size: 20px;
   font-weight: 500;

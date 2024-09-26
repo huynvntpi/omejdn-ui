@@ -8,6 +8,7 @@
 
 .card {
     padding: 10px 5px !important;
+    border: 1px solid rgba(225, 228, 229, 1);
 }
 
 .card-body {
@@ -28,4 +29,22 @@
     line-height: 16.94px;
     text-align: left;
     color: rgba(78, 95, 111, 1);
+}
+
+.input-group-for-children {
+    background-color: #fff;
+    border-radius: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 1);
+    overflow: hidden;
+}
+
+/* .input-group-for-children label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.input-group-for-children .form-control {
+    background-color: transparent;
+    border: none !important;
 }

@@ -3,7 +3,7 @@
   class="form-inline custom-form-inline"
   style="display: table; margin: auto"
 >
-  <div class="input-group" *ngIf="!showNewClient">
+  <div class="input-group bg-white rounded-lg" *ngIf="!showNewClient">
     <div
       class="px-2 d-flex justify-content-center align-items-center custom-search-icon-wrapper"
     >
@@ -15,7 +15,7 @@
       />
     </div>
     <input
-      class="form-control"
+      class="form-control border-0"
       type="search"
       [(ngModel)]="searchTerm"
       name="searchTerm"
@@ -29,9 +29,9 @@
       Add Client
     </button>
   </div>
-  <div class="input-group" *ngIf="showNewClient">
-    <span class="input-group-text rounded-left-side">Please enter a new Client ID</span>
-    <input class="form-control" placeholder="Enter client ID" type="text" #newClientId />
+  <div class="input-group  bg-white rounded-lg" *ngIf="showNewClient">
+    <span class="input-group-text rounded-left-side border-0">Please enter a new Client ID</span>
+    <input class="form-control border-0" style="margin-left: 0px;" placeholder="Enter client ID" type="text" #newClientId />
     <button
       class="btn btn-outline-primary border-0"
       type="button"
@@ -57,7 +57,7 @@
 </div>
 
 <!--Clientlist-->
-<div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="clients">
+<div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="clients" style="padding-left: 8%; padding-right: 8%">
   <div class="col" *ngFor="let client of clients | search : searchTerm">
     <div class="card m-2 h-100" [routerLink]="['/client', client.client_id]">
       <div class="card-header">

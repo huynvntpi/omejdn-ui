@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white navbar-custom">
+<nav class="navbar navbar-expand-lg navbar-light bg-white navbar-custom" style="z-index: 1;">
   <a class="navbar-brand" href="./">
     <img src="assets/img/logo-vn.svg" height="24px" width="138px" />
   </a>
@@ -185,7 +185,21 @@
 </div>
 
 <div class="content-container mx-4">
-  <div class="section-below-header"></div>
+  <div class="section-below-header">
+    <nav *ngIf="breadcrumbs.length > 1" aria-label="breadcrumb" style="margin-top: 105px; margin-left: 10%;">
+      <ol class="breadcrumb" >
+        <li *ngFor="let route of breadcrumbs; let i=index" class="breadcrumb-item">
+          <ng-container *ngIf="i != breadcrumbs.length - 1; else lastBreadcrumb">
+            <a [routerLink]="route" [title]="route">{{route}}</a>
+          </ng-container>
+          <ng-template #lastBreadcrumb>
+            <span>{{route}}</span>
+          </ng-template>
+        </li>
+      </ol>
+    </nav>
+    
+  </div>
   <!--Title-->
   <!-- <h2>{{ pageTitle }}</h2> -->
 

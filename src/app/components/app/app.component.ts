@@ -20,6 +20,7 @@ export class AppComponent {
   infos: any[];
   pageAccessLevel = ""; // May be set to 'login' or 'admin' to show error messages
   currentRoute: string;
+  breadcrumbs: string[] = [];
   currentLanguage: "en" | "tw" = "en";
 
   constructor(
@@ -66,6 +67,7 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url.split("/")[1];
+        this.breadcrumbs = event.url.split('/').filter(route => route);
       }
     });
   }
@@ -184,4 +186,5 @@ export class AppComponent {
   changelLanguage(value: "en" | "tw") {
     this.currentLanguage = value;
   }
+
 }

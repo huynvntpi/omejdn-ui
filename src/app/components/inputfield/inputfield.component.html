@@ -76,12 +76,19 @@
 <!--Attributes-->
 <app-inputfield [name]="value['key']" [(value)]="value['value']" [deleteCallback]="deleteCallback" [refID]="refID"
     *ngIf="getType().startsWith('attribute') && addCallback == null" [hasChildren]="true"></app-inputfield>
-<div class="input-group my-2" *ngIf="getType().startsWith('attribute') && addCallback != null">
-  <input class="form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" type="text"     [disabled]="static">
-  <select #newType class="form-control">
-    <option *ngFor="let type of [['Text','string'],['Multivalued','array-any'],['Truth value','boolean'],['Number','number']]" value="{{ type[1] }}">
-      {{ type[0] }}
-    </option>
-  </select>
-  <button class="btn btn-link" style="text-decoration: none;" type="button" (click)="addCallback(value,newType.value); value =''">+ Add</button>
+<div class="my-2 d-flex align-items-center" *ngIf="getType().startsWith('attribute') && addCallback != null">
+  <div class="input-group d-flex justify-content-center align-items-center bg-white rounded-lg " style="height: 46px;">
+    <div class="flex-1 ">
+      <input class="form-control border-0 bg-transparent" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" type="text"  placeholder="Enter attribute's name"    [disabled]="static" />
+    </div>
+    <div class="vertifcal-divider"></div>
+    <div class="flex-1" >
+      <select #newType class="form-control border-0 bg-transparent" style="background-color: transparent;">
+        <option *ngFor="let type of [['Text','string'],['Multivalued','array-any'],['Truth value','boolean'],['Number','number']]" value="{{ type[1] }}">
+          {{ type[0] }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <button class="btn btn-link" style="text-decoration: none; text-align: right; padding-right: 0px; min-width: 70px" type="button" (click)="addCallback(value,newType.value); value =''">+ Add</button>
 </div>

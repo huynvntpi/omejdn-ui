@@ -8,6 +8,15 @@ body { margin: 0; font-family: Inter, "Helvetica Neue", sans-serif !important; }
 html, body { height: 100%; }
 body { margin: 0; font-family: Inter , "Helvetica Neue", sans-serif !important; }
 
+.btn.btn-link {
+  color: #3656DE !important;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+}
+
 .btn.btn-outline-primary {
   color: #08082C !important;
 
@@ -204,11 +213,25 @@ div.card-avatar-character {
 input {
   border-radius: 10px !important;
   border: 1px solid rgba(225, 228, 229, 1) !important;
-  
+
   font-size: 14px;
   font-weight: 400;
   line-height: 16.94px;
   text-align: left;
+
+  height: 46px;
+}
+
+select {
+  height: 46px;
+
+  font-size: 14px  !important;
+  font-weight: 400  !important;
+  line-height: 16.94px  !important;
+  text-align: left  !important;
+  color: rgba(8, 8, 44, 1) !important;
+
+  padding-top: 10px !important;
 }
 
 input::placeholder {
@@ -235,9 +258,10 @@ input:focus {
 }
 .rounded-left-side {
   border-radius: 10px 0 0px 10px !important;
-  border: none !important;
 }
-
+.rounded-right-side {
+  border-radius: 0px 10px 10px 0px !important;
+}
 .page-content-detail {
   padding: 40px calc(10% - 20px);
 }
@@ -246,11 +270,17 @@ input:focus {
   border-radius: 100% !important;
 }
 
+.rounded-lg {
+  border-radius: 10px !important;
+}
+
 .btn-trash-circle {
   background-color: rgba(249, 250, 252, 1) !important;
   border-width: 0 !important;
   border-radius: 100% !important;
   margin-left: 20px !important;
+  width: 46px;
+  height: 46px;
 }
 
 .btn-trash-circle:hover  {
@@ -268,4 +298,14 @@ input:focus {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.vertifcal-divider {
+  width: 1px;
+  height: 70%;
+  min-height: 30px;
+  background-color: rgba(225, 228, 229, 1) !important;
+}
+.flex-1 {
+  flex: 1;
 }

@@ -18,7 +18,7 @@
 
     <!--Add/delete-->
     <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null">
-      <span class="fa fa-trash"></span>
+      <img alt="trash" src="assets/img/trash-icon.svg" />
     </button>
     <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
       <span class="fa fa-plus"></span>
@@ -49,7 +49,7 @@
 
    <!--Add/delete-->
     <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null">
-    <span class="fa fa-trash"></span>
+      <img alt="trash" src="assets/img/trash-icon.svg" />
     </button>
     <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
       <span class="fa fa-plus"></span>
@@ -60,7 +60,7 @@
 <div class="card my-2 mt-4 {{getType().startsWith('array') && hasChildren ? 'bg-surface-secondary': 'bg-surface' }}" *ngIf="getType().startsWith('array')">
   <div class="card-header {{getType().startsWith('array') && hasChildren ? 'card-header-child' : ''}}" style="border-bottom: none;">
     {{name}}
-    <button class="btn btn-delete-complex-attribute float-end bg-transparent border-0 position-absolute" style="right: 0; top: 0;" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null"><span class="fa fa-trash"></span></button>
+    <button class="btn btn-delete-complex-attribute float-end bg-transparent border-0 position-absolute" style="right: 0; top: 0;" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null"><img alt="trash" src="assets/img/trash-icon.svg" /></button>
   </div>
   <div class="card-body">
     <div *ngFor="let item of value; let i=index" class="card-element ">

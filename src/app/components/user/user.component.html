@@ -32,7 +32,7 @@
   class="alert alert-secondary alert-dismissible fade show" role="alert">No users to show</div>
 
 <!--Userlist-->
-<div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="users">
+<div class="row row-cols-1 row-cols-md-3 g-4 " *ngIf="users" style="padding-left: 8%; padding-right: 8%">
   <div class="col" *ngFor="let user of users | search: searchTerm">
     <div class="card m-2 h-100" [routerLink]="['/user', user.username]">
       <div class="card-header">

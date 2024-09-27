@@ -18,8 +18,11 @@
     <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null">
       <img alt="trash" src="assets/img/trash-icon.svg" />
     </button>
-    <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
+    <!-- <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
       <span class="fa fa-plus"></span>
+    </button> -->
+    <button class="btn btn-link" style="text-decoration: none; text-align: right; padding-right: 0px; min-width: 70px" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
+      + Add
     </button>
   </div>
 </div>
@@ -39,8 +42,11 @@
    <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null">
     <img alt="trash" src="assets/img/trash-icon.svg" />
   </button>
-  <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
+  <!-- <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
     <span class="fa fa-plus"></span>
+  </button> -->
+  <button class="btn btn-link" style="text-decoration: none; text-align: right; padding-right: 0px; min-width: 70px" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
+    + Add
   </button>
 </div>
 
@@ -69,8 +75,12 @@
     <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="deleteCallback(refID)" *ngIf="deleteCallback != null">
       <img alt="trash" src="assets/img/trash-icon.svg" />
     </button>
-    <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
+    <!-- <button class="btn btn-outline-secondary btn-trash-circle" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
       <span class="fa fa-plus"></span>
+      
+    </button> -->
+    <button class="btn btn-link" style="text-decoration: none; text-align: right; padding-right: 0px; min-width: 70px" type="button" (click)="addCallback(value,getType()); value =''" *ngIf="addCallback != null">
+      + Add
     </button>
 </div>
 

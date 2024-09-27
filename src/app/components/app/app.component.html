@@ -193,7 +193,7 @@
             <a [routerLink]="route" [title]="route">{{route}}</a>
           </ng-container>
           <ng-template #lastBreadcrumb>
-            <span>{{route}}</span>
+            <span style="max-width: 10px !important; text-overflow: ellipsis;">{{route}}</span>
           </ng-template>
         </li>
       </ol>

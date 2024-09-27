@@ -10,7 +10,7 @@
     <select [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" class="form-control" [disabled]="static" *ngIf="getType() == 'enum'">
       <option *ngFor="let val of options" [value]="val">{{val}}</option>
     </select>
-    <select multiple class="form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" [size]="options.length"  [disabled]="static" *ngIf="getType() == 'enum-multi'">
+    <select multiple class="form-control enum-multi-form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" [size]="options.length"  [disabled]="static" *ngIf="getType() == 'enum-multi'">
       <option *ngFor="let val of options" [value]="val">{{val}}</option>
     </select>
 
@@ -66,7 +66,7 @@
     <select [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" class="form-control" [disabled]="static" *ngIf="getType() == 'enum'">
       <option *ngFor="let val of options" [value]="val">{{val}}</option>
     </select>
-    <select multiple class="form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" [size]="options.length"  [disabled]="static" *ngIf="getType() == 'enum-multi'">
+    <select multiple class="form-control enum-multi-form-control" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)" [size]="options.length"  [disabled]="static" *ngIf="getType() == 'enum-multi'">
       <option *ngFor="let val of options" [value]="val">{{val}}</option>
     </select>
   </div>

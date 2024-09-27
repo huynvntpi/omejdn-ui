@@ -30,11 +30,11 @@
           *ngIf="client.token_endpoint_auth_method.startsWith('client_secret')"></app-inputfield>
 
       <!--Private Key-->
-      <div class="my-2 card-element" *ngIf="client.token_endpoint_auth_method.startsWith('private_key')">
+      <div class="my-2" *ngIf="client.token_endpoint_auth_method.startsWith('private_key')">
         <ngb-alert [type]="'info'" [dismissible]="false" class="my-2">
           Copy a certificate in here, if you want to replace it. Leave empty to delete the certificate.
         </ngb-alert>
-        <textarea class="form-control " name="certificate" aria-label="New Certificate"
+        <textarea class="form-control rounded-lg" name="certificate" aria-label="New Certificate"
           [(ngModel)]="cert.certificate" rows="4">{{cert.certificate}}</textarea>
       </div>
     </div>
